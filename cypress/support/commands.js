@@ -13,11 +13,16 @@
 import "cypress-file-upload";
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
+
+//cy.getBySel() will return the DOM element using cy.get.
 Cypress.Commands.add("getByTestId", (selector) => {
   return cy.get(`[data-testid=${selector}]`);
 });
-//
+
+//This command takes in a selector wildcard * and returns the DOM element using cy.get(). This command will return multiple elements.
+Cypress.Commands.add("getByTestIds", (selector) => {
+  return cy.get(`[data-testid*=${selector}]`);
+});
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //

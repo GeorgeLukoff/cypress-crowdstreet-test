@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667",
+    "cypress:run": "cypress run",
+    "cypress:run:mobile": "cypress run --config viewportWidth=375,viewportHeight=667",
+    "prettier": "prettier --write '**/**.{ts,js,tsx}' '*.{json,md,yml}'",
+    "start": "next start",
+    "stop-only": "stop-only --folder cypress/integration"
+  },
+  "dependencies": {
+    "@xstate/react": "^2.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.27.1",
+    "react-slick": "^0.28.1",
+    "xstate": "^4.30.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "chai": "^4.3.6",
+    "eslint": "^8.10.0",
+    "eslint-config-next": "^12.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "url-loader": "^4.1.1"
+  }
+}
