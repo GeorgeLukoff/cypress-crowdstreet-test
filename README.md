@@ -12,3 +12,5 @@ You will need to install all of the npm packages and dependencies. You will need
 Install VSCode from here - https://code.visualstudio.com/download. Within VSCode, you can open the repo via File > Open Folder.
 
 Now that you have the application opened inside of VSCode we can use the built-in terminal to install our NPM packages. You can open the terminal via Terminal > New Terminal then type the following to install all of our NPM dependencies - npm install.
+
+To open Cypress run the following command: npx cypress open
