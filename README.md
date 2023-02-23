@@ -13,4 +13,11 @@ Install VSCode from here - https://code.visualstudio.com/download. Within VSCode
 
 Now that you have the application opened inside of VSCode we can use the built-in terminal to install our NPM packages. You can open the terminal via Terminal > New Terminal then type the following to install all of our NPM dependencies - npm install.
 
-To open Cypress run the following command: npx cypress open
+To open Cypress run the following command: npx cypress open.
+
+/*
+THESE STEPS MAY NOT BE NEEDED
+*/
+On opening Cypress you will be prompted with the Launchpad. Its job is to guide you through the decisions and configuration tasks you need to complete before you start using Cyrpres or writing your first test. If this is your first time using Cypress it will take you through the following steps in order.
+
+On the Launching Browser page you're presented with the list of compatible browsers Cypress found on your system so, select a Browser and click 'Start' button.
