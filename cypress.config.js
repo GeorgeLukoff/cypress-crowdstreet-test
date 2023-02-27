@@ -8,5 +8,7 @@ module.exports = defineConfig({
     baseUrl: "https://sales.crowdstreet.com/",
     watchForFileChanges: false,
     chromeWebSecurity: false,
+    viewportWidth: 1000,
+    viewportHeight: 1600
   },
 });
