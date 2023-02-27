@@ -1,7 +1,5 @@
 # cypress-crowdstreet-test
 
-# cypress-crowdstreet-test
-
 You are going to download or clone a copy of the application onto your computer to follow along: git clone --branch master git@github.com:GeorgeLukoff/cypress-crowdstreet-test.git
 
 OR
