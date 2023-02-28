@@ -20,5 +20,5 @@ _/
 
 On the Launching Browser page you're presented with the list of compatible browsers Cypress found on your system so, select a Browser and click 'Start' button.
 
-To run sctipts headlesly within the terminal use the following syntax - <npm run command name>.
+To run sctipts headlesly within the terminal use the following syntax - "npm run command name".
 For the list of avaliable commands refer to cypress/package.json file.
