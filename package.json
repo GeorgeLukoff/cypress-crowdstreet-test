@@ -1,0 +1,33 @@
+{
+  "private": false,
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:spec": "cypress run --spec",
+    "cy:record": "cypress run --record --key e4e7493c-5905-423e-9685-682640c915ae",
+    "cy:chrome": "cypress run --browser chrome",
+    "cy:firefox": "cypress run --browser firefox",
+    "cy:webkit": "cypress run --browser webkit",
+    "cy:all": "cypress run --browser chrome && cypress run --browser firefox && cypress run --browser webkit",
+    "cy:all:record": "cypress run --browser chrome && cypress run --browser firefox && cypress run --browser webkit --record --key e4e7493c-5905-423e-9685-682640c915ae",
+    "cy:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667",
+    "cy:run:mobile": "cypress run --config viewportWidth=375,viewportHeight=667"
+  },
+  "dependencies": {
+    "@xstate/react": "^2.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.27.1",
+    "react-slick": "^0.28.1",
+    "xstate": "^4.30.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "chai": "^4.3.6",
+    "eslint": "^8.10.0",
+    "eslint-config-next": "^12.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "url-loader": "^4.1.1"
+  }
+}

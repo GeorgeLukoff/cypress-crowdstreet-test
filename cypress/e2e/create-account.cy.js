@@ -15,6 +15,11 @@ describe("Create CrowdStreet account", () => {
   //   cy.login("username", "password");
   // });
 
+  // it("logs in", () => {
+  //   cy.visit("/login");
+  //   login("username", "password");
+  // });
+
   context("Create an Account", () => {
     it("Fills out basic info", () => {
       cy.visit("/invexp/accounts/create-account");
