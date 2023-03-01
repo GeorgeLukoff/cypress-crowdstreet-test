@@ -23,7 +23,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
-    "chai": "^8.19.2",
+    "chai": "^4.3.7",
+    "cypress-wait-until": "^1.7.2",
     "eslint": "^8.10.0",
     "eslint-config-next": "^12.1.0",
     "eslint-config-prettier": "^8.5.0",

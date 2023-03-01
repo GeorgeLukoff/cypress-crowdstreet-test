@@ -6,7 +6,7 @@
 // import { string } from "../fixtures/data";
 
 import { basicInfo } from "../support/page-objects/basic-info";
-import { confirmAndSave } from "../support/page-objects/confirm-save";
+import { confirmAndSave } from "../support/page-objects/confirm-save-logout";
 import { personalInfo } from "../support/page-objects/personal-info";
 import { uploadPhotoId } from "../support/page-objects/upload-id";
 import { uploadAuthLetter } from "../support/page-objects/upload-letter";

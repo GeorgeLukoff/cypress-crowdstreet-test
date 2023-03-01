@@ -11,6 +11,7 @@
 /// <reference types="Cypress" />
 //
 import "cypress-file-upload";
+import "cypress-wait-until";
 // -- This is a parent command --
 
 // First time login
