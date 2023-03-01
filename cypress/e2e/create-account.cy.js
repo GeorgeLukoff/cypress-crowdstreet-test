@@ -10,30 +10,18 @@ describe("Create CrowdStreet account", () => {
     cy.randomize();
   });
 
-  // it("logs in", () => {
-  //   cy.visit("/login");
-  //   cy.login("username", "password");
-  // });
-
-  // it("logs in", () => {
-  //   cy.visit("/login");
-  //   login("username", "password");
-  // });
-
   context("Create an Account", () => {
     it("Fills out basic info", () => {
       cy.visit("/invexp/accounts/create-account");
       cy.get(".tablet-menu").click();
       cy.contains("Create An Account").click({ force: true });
-      cy.getByTestId("firstName").type("G");
-      cy.getByTestId("lastName").type("L");
-      cy.getByTestId("email").type(`${string}@test.com`);
-      cy.getByTestId("password").type(`P#${string}@S`);
+      cy.getByTestId("firstName").type(`G${string}`);
+      cy.getByTestId("lastName").type(`L${string}`);
+      cy.loginCreate(`${string}@test.com`, `P#${string}@S`);
       cy.getByTestId("confirm-password").type(`P#${string}@S`);
       cy.getByTestId("accreditedOptionNo").check();
       cy.getByTestId("hasAgreedTos").check();
       cy.bypassRecaptcha().click();
-
       cy.getByTestId(".recaptcha-checkbox-checkmark").should("be.checked");
 
       cy.get("span.leading-4").should((login_button) => {
@@ -50,6 +38,7 @@ describe("Create CrowdStreet account", () => {
         cy.getByTestId("login-email-textbox").type(`${string}@test.com`);
         cy.getByTestId("login-password-textbox").type(`P#${string}@S`);
         cy.log("*** Begin filling out User's personal info ***");
+        cy.signin();
         cy.getByTestId("login-email-textbox").type(`${string}@test.com`);
         cy.getByTestId("login-password-textbox").type(`P#${string}@S`);
         cy.get("#btn_login").click();

@@ -12,7 +12,19 @@
 //
 import "cypress-file-upload";
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+
+// First time login
+Cypress.Commands.add("loginCreate", (email, password) => {
+  cy.get("[data-testid='email']").type(email);
+  cy.get("[data-testid='password']").type(password);
+});
+
+// Signing into existing account
+Cypress.Commands.add("signin", (username, password) => {
+  cy.getByTestId("login-email-textbox").type(email);
+  cy.getByTestId("login-password-textbox").type(password);
+  cy.get("#btn_login").click();
+});
 
 //cy.getBySel() will return the DOM element using cy.get.
 Cypress.Commands.add("getByTestId", (selector) => {
@@ -23,17 +35,8 @@ Cypress.Commands.add("getByTestId", (selector) => {
 Cypress.Commands.add("getByTestIds", (selector) => {
   return cy.get(`[data-testid*=${selector}]`);
 });
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+// Bypassing reCaptcha
 Cypress.Commands.add("bypassRecaptcha", () => {
   cy.wait(5000);
   cy.get("iframe[title='reCAPTCHA']").then((recaptchaIframe) => {
@@ -46,6 +49,7 @@ Cypress.Commands.add("bypassRecaptcha", () => {
   });
 });
 
+// Randomizes fixuture data
 Cypress.Commands.add("randomize", () => {
   const randomString = Math.random().toString(36).substring(2, 8);
   cy.readFile("cypress/fixtures/data.json", (err, data) => {
@@ -58,11 +62,14 @@ Cypress.Commands.add("randomize", () => {
   });
 });
 
-Cypress.Commands.add("login", (username, password) => {
-  cy.get("#login-username").type(username);
-  cy.get("#login-password").type(password);
-  cy.get("#login").submit();
-});
+// Clears a field and then types to it
+Cypress.Commands.add(
+  "clearThenType",
+  { prevSubject: true },
+  (subject, text) => {
+    cy.wrap(subject).clear().type(text);
+  }
+);
 
 // Cypress.Commands.add("randomString", function () {
 //   function genRandomString(length) {
@@ -76,10 +83,13 @@ Cypress.Commands.add("login", (username, password) => {
 //     return result;
 //   }
 
-Cypress.Commands.add(
-  "clearThenType",
-  { prevSubject: true },
-  (subject, text) => {
-    cy.wrap(subject).clear().type(text);
-  }
-);
+// -- This is a child command --
+// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+//
+//
+// -- This is a dual command --
+// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
+//
+//
+// -- This will overwrite an existing command --
+// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
