@@ -22,6 +22,8 @@
     "xstate": "^4.30.5"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
     "autoprefixer": "^10.4.2",
     "chai": "^4.3.7",
     "cypress-wait-until": "^1.7.2",
@@ -29,6 +31,7 @@
     "eslint-config-next": "^12.1.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.32.2",
     "url-loader": "^4.1.1"
   }
 }
