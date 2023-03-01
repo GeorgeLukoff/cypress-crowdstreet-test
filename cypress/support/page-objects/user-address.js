@@ -1,3 +1,4 @@
+
 export function userAddress() {
   cy.log("*** Begin filling out User's address ***");
   cy.getByTestId("user-profile-address").clearThenType("123 Main St.");

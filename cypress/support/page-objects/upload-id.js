@@ -1,3 +1,4 @@
+
 export function uploadPhotoId() {
   cy.getByTestId("id-dropzone-button")
     .should("be.visible")

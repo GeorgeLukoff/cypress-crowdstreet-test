@@ -1,3 +1,4 @@
+
 export function confirmAndSave() {
   cy.getByTestId("user-profile-accredited-true")
     .focus()

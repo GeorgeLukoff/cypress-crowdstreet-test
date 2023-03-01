@@ -1,6 +1,6 @@
-import { string } from "../e2e/fixtures/data";
 
 export function basicInfo() {
+  let string;
   cy.visit("/invexp/accounts/create-account");
   cy.get(".tablet-menu").click();
   cy.contains("Create An Account").click({ force: true });
@@ -11,8 +11,8 @@ export function basicInfo() {
   cy.getByTestId("accreditedOptionNo").check();
   cy.getByTestId("hasAgreedTos").check();
   cy.bypassRecaptcha().click();
-  cy.getByTestId(".recaptcha-checkbox-checkmark").should("be.checked");
-
+  cy.get("#recaptcha - anchor").should("be.checked");
+  
   cy.get("span.leading-4").should((login_button) => {
     expect(login_button).to.be.visible().click(login_button);
 
@@ -21,4 +21,4 @@ export function basicInfo() {
     });
   });
   cy.url().should("include", "invexp/properties/all");
-}
+};

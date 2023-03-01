@@ -1,12 +1,8 @@
+
 export function personalInfo() {
   cy.visit("invexp/accounts/login/");
-  cy.getByTestId("login-email-textbox").type(`${string}@test.com`);
-  cy.getByTestId("login-password-textbox").type(`P#${string}@S`);
   cy.log("*** Begin filling out User's personal info ***");
   cy.signin();
-  cy.getByTestId("login-email-textbox").type(`${string}@test.com`);
-  cy.getByTestId("login-password-textbox").type(`P#${string}@S`);
-  cy.get("#btn_login").click();
   cy.getByTestId("verify-mfa-skip").click();
   cy.url().should("include", "/invexp/properties/all");
   cy.get("a[href='/invexp/account/profile/']").first().click({ force: true });

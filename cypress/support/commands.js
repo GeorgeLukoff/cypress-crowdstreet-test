@@ -20,7 +20,7 @@ Cypress.Commands.add("loginCreate", (email, password) => {
 });
 
 // Signing into existing account
-Cypress.Commands.add("signin", (username, password) => {
+Cypress.Commands.add("signin", (email, password) => {
   cy.getByTestId("login-email-textbox").type(email);
   cy.getByTestId("login-password-textbox").type(password);
   cy.get("#btn_login").click();

@@ -2,8 +2,9 @@
 
 // import { includes } from "cypress/types/lodash";
 // import { contains } from "cypress/types/jquery";
-import { readFile } from "fs";
-import { string } from "../e2e/fixtures/data";
+// import { readFile } from "fs";
+// import { string } from "../fixtures/data";
+
 import { basicInfo } from "../support/page-objects/basic-info";
 import { confirmAndSave } from "../support/page-objects/confirm-save";
 import { personalInfo } from "../support/page-objects/personal-info";
